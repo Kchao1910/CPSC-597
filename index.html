@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="index.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <title>Document</title>
+  <script src="https://kit.fontawesome.com/e3488cdef9.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="left-controls-container">
+    <div class="logo-wrapper">
+      TINKERTURE
+    </div>
+    <section class="left-side-panel">
+      <h2 class="def-text def-text-header">Elements</h2>
+      <hr>
+      <div class="text-elements-panel">
+        <p class="def-text def-text-header">Headers</p>
+        <section class="icon-collection">
+          <div class="toolbar-icon def-text text-icon" data-tagName="h1">H1</div>
+          <div class="toolbar-icon def-text text-icon" data-tagName="h2">H2</div>
+          <div class="toolbar-icon def-text text-icon" data-tagName="h3">H3</div>
+          <div class="toolbar-icon def-text text-icon" data-tagName="h4">H4</div>
+          <div class="toolbar-icon def-text text-icon" data-tagName="h5">H5</div>
+          <div class="toolbar-icon def-text text-icon" data-tagName="h6">H6</div>
+        </section>
+        <hr>
+        <p class="def-text def-text-header">Paragraph</p>
+        <section class="icon-collection">
+          <div class="toolbar-icon text-icon" data-tagName="p">
+            <i class="far fa-paragraph text-icon" data-tagName="p"></i>
+          </div>
+        </section>
+        <hr>
+        <p class="def-text def-text-header">Font Settings</p>
+        <section>
+          <div class="dual-column">
+            <p class="def-text">Font Family</p>
+            <select name="font-family-select" id="font-family-select">
+              <option value="">--Choose an option--</option>
+              <option value="Montserrat, sans-serif">Montserrat</option>
+              <option value="Roboto, sans-serif">Roboto</option>
+            </select>
+          </div>
+          <div class="dual-column">
+            <p class="def-text">Font Weight</p>
+            <select name="font-weight-select" id="font-weight-select">
+              <option value="">--Choose an option--</option>
+              <option value="300">300</option>
+              <option value="400">400</option>
+              <option value="700">700</option>
+            </select>
+          </div>
+          <div class="dual-column">
+            <p class="def-text">Font Size</p>
+            <input type="number" id="font-size-input" name="font-size-input" min="1" placeholder="16">
+          </div>
+          <div class="dual-column">
+            <p class="def-text">Font Style</p>
+            <select name="font-style-select" id="font-style-select">
+              <option value="">--Choose an option--</option>
+              <option value="normal">Normal</option>
+              <option value="italic">Italic</option>
+              <option value="oblique">Oblique</option>
+            </select>
+          </div>
+          <div class="dual-column">
+            <p class="def-text">Font Color</p>
+            <input type="color" id="font-color-input" value="#ff0000">
+          </div>
+          <hr>
+          <p class="def-text def-text-header">Text Alignment Settings</p>
+          <section class="icon-collection">
+            <div class="toolbar-icon text-align-icon" data-align="left">
+              <i class="fal fa-align-left text-align-icon" data-align="left"></i>
+            </div>
+            <div class="toolbar-icon text-align-icon" data-align="center">
+              <i class="fal fa-align-center text-align-icon" data-align="center"></i>
+            </div>
+            <div class="toolbar-icon text-align-icon" data-align="right">
+              <i class="fal fa-align-right text-align-icon" data-align="right"></i>
+            </div>
+            <div class="toolbar-icon text-align-icon" data-align="justify">
+              <i class="fal fa-align-justify text-align-icon" data-align="justify"></i>
+            </div>
+          </section>
+        </section>
+        <hr>
+        <p class="def-text def-text-header">Image</p>
+        <div class="dual-column">
+          <p class="def-text">Upload Image</p>
+          <input type="file" id="image-file-input" name="file-input">
+        </div>
+        <section class="icon-collection">
+          <div class="toolbar-icon media-icon" data-tagName="img">
+            <i class="fas fa-image media-icon" data-tagName="img"></i>
+          </div>
+        </section>
+        <hr>
+        <p class="def-text def-text-header">Video</p>
+        <div class="dual-column">
+          <p class="def-text">Upload Video</p>
+          <input type="file" id="video-file-input" name="video-input">
+        </div>
+        <section class="icon-collection">
+          <div class="toolbar-icon media-icon" data-tagName="video">
+            <i class="fas fa-video media-icon" data-tagName="video"></i>
+          </div>
+        </section>
+        <hr>
+        <p class="def-text def-text-header">Grid</p>
+        <div class="dual-column">
+          <p class="def-text">Columns</p>
+          <input type="number" id="grid-columns" name="grid-columns" min="1" placeholder="4">
+        </div>
+        <div class="dual-column">
+          <p class="def-text">Column Unit</p>
+          <select name="grid-column-unit-select" id="grid-column-unit-select">
+            <option value="">--Choose an option--</option>
+            <option value="fr">fr</option>
+            <option value="px">px</option>
+            <option value="em">em</option>
+          </select>
+        </div>
+        <div class="dual-column">
+          <p class="def-text">Column Size</p>
+          <input type="number" id="grid-column-size" name="grid-column-size" min="1" placeholder="4">
+        </div>
+        <div class="dual-column">
+          <p class="def-text">Rows</p>
+          <input type="number" id="grid-rows" name="grid-rows" min="1" placeholder="4">
+        </div>
+        <div class="dual-column">
+          <p class="def-text">Row Unit</p>
+          <select name="grid-row-unit-select" id="grid-row-unit-select">
+            <option value="">--Choose an option--</option>
+            <option value="fr">fr</option>
+            <option value="px">px</option>
+            <option value="em">em</option>
+          </select>
+        </div>
+        <div class="dual-column">
+          <p class="def-text">Row Size</p>
+          <input type="number" id="grid-row-size" name="grid-row-size" min="1" placeholder="4">
+        </div>
+        <div class="dual-column">
+          <p class="def-text">Grid Gap</p>
+          <input type="number" id="grid-gap" name="grid-gap" min="1" placeholder="4">
+        </div>
+        <section class="icon-collection">
+          <div class="toolbar-icon grid-icon">
+            <i class="fas fa-th-large grid-icon"></i>
+          </div>
+        </section>
+<!--         <hr>
+        <p class="def-text def-text-header">Grid Tracks</p>
+        <div class="dual-column">
+          <p class="def-text">Show Tracks</p>
+          <input type="checkbox" id="track-input" name="track-input">
+        </div>
+        <div class="dual-column">
+          <p class="def-text">Track Color</p>
+          <input type="color" value="#ff9900">
+        </div> -->
+        <hr>
+        <p class="def-text def-text-header">Button</p>
+        <div class="dual-column">
+          <p class="def-text">Button Width</p>
+          <input type="number" id="button-width-input" name="button-width-input" min="1" placeholder="200">
+        </div>
+        <div class="dual-column">
+          <p class="def-text">Button Height</p>
+          <input type="number" id="button-height-input" name="button-height-input" min="1" placeholder="200">
+        </div>
+        <section class="icon-collection">
+          <div class="toolbar-icon def-text button-icon">
+            <i class="far fa-square button-icon"></i>
+          </div>
+        </section>
+        <hr>
+        <p class="def-text def-text-header">Components</p>
+        <section class="icon-collection2">
+          <div class="toolbar-icon2 def-text" data-tagName="navbar">Navbar</div>
+          <div class="toolbar-icon2 def-text" data-tagName="hero">Hero</div>
+          <div class="toolbar-icon2 def-text" data-tagName="cards">Cards</div>
+          <div class="toolbar-icon2 def-text" data-tagName="contact">Contact</div>
+          <div class="toolbar-icon2 def-text" data-tagName="footer">Footer</div>
+        </section>
+      </div>
+    </section>
+  </div>
+
+  <section class="central-panel">
+    <div class="central-toolbar">
+      <div class="toolbar-icon media-query-icon" data-media-query="desktop">
+        <i class="fal fa-desktop media-query-icon" data-media-query="desktop"></i>
+      </div>
+      <div class="toolbar-icon media-query-icon" data-media-query="tablet">
+        <i class="far fa-tablet media-query-icon" data-media-query="tablet"></i>
+      </div>
+      <div class="toolbar-icon media-query-icon" data-media-query="mobile-side">
+        <i class="far fa-mobile media-query-icon mobile-side" data-media-query="mobile-side"></i>
+      </div>
+      <div class="toolbar-icon media-query-icon" data-media-query="mobile">
+        <i class="far fa-mobile media-query-icon" data-media-query="mobile"></i>
+      </div>
+    </div>
+    <main class="main-wrapper">
+      <div class="editor-wrapper">
+        <div class="editor"></div>
+      </div>
+    </main>
+  </section>
+
+  <div class="right-controls-container">
+    <div class="download-wrapper">
+      <input id="download-link" type="button" value="Download">
+    </div>
+    <section class="right-panel">
+      <h2 class="def-text def-text-header">Layout</h2>
+      <hr>
+      <p class="def-text def-text-header">Position</p>
+      <div class="dual-column">
+        <p class="def-text">Positioning</p>
+        <select name="position-select" id="position-select">
+          <option value="">--Choose an option--</option>
+          <option value="static">Static</option>
+          <option value="relative">Relative</option>
+          <option value="absolute">Absolute</option>
+          <option value="sticky">Sticky</option>
+        </select>
+      </div>
+      <div class="location-pad-container">
+        <div class="outer-pad controls-grid">
+          <input id="position-left" class="position-input" type="number" placeholder="0" title="position-left" data-property="position-left" data-type="position" min="0" placeholder="25">
+          <input id="position-right" class="position-input" type="number" placeholder="0" title="position-right" data-property="position-right" data-type="position" min="0" placeholder="25">
+          <input id="position-top" class="position-input" type="number" placeholder="0" title="position-top" data-property="position-top" data-type="position" min="0" placeholder="25">
+          <input id="position-bottom" class="position-input" type="number" placeholder="0" title="position-bottom" data-property="position-bottom" data-type="position" min="0" placeholder="25">
+          <div class="grid-rect"></div>
+        </div>
+      </div>
+      <hr>
+      <p class="def-text def-text-header">Margin</p>
+      <div class="location-pad-container">
+        <div class="outer-pad controls-grid">
+          <input id="margin-left" class="position-input" type="number" placeholder="0" title="margin-left" data-property="margin-left" data-type="margin" min="0" placeholder="25">
+          <input id="margin-right" class="position-input" type="number" placeholder="0" title="margin-right" data-property="margin-right" data-type="margin" min="0" placeholder="25">
+          <input id="margin-top" class="position-input" type="number" placeholder="0" title="margin-top" data-property="margin-top" data-type="margin" min="0" placeholder="25">
+          <input id="margin-bottom" class="position-input" type="number" placeholder="0" title="margin-bottom" data-property="margin-bottom" data-type="margin" min="0" placeholder="25">
+          <div class="grid-rect"></div>
+        </div>
+      </div>
+      <hr>
+      <p class="def-text def-text-header">Padding</p>
+      <div class="location-pad-container">
+        <div class="outer-pad controls-grid">
+          <input id="padding-left" class="position-input" type="number" placeholder="0" title="padding-left" data-property="padding-left" data-type="padding" min="0" placeholder="25">
+          <input id="padding-right" class="position-input" type="number" placeholder="0" title="padding-right" data-property="padding-right" data-type="padding" min="0" placeholder="25">
+          <input id="padding-top" class="position-input" type="number" placeholder="0" title="padding-top" data-property="padding-top" data-type="padding" min="0" placeholder="25"> 
+          <input id="padding-bottom" class="position-input" type="number" placeholder="0" title="padding-bottom" data-property="padding-bottom" data-type="padding" min="0" placeholder="25"> 
+          <div class="grid-rect"></div>
+        </div>
+      </div>
+      <hr>
+      <p class="def-text def-text-header">Flexbox</p>
+      <div class="dual-column">
+        <p class="def-text">Flex Direction</p>
+        <select name="flex-direction-select" id="flex-direction-select">
+          <option value="">--Choose an option--</option>
+          <option value="row">Row</option>
+          <option value="stretch">Row Reverse</option>
+          <option value="column">Column</option>
+          <option value="">Column Reverse</option>
+        </select>
+      </div>
+      <div class="dual-column">
+        <p class="def-text">Flex Wrap</p>
+        <select name="flex-wrap-select" id="flex-wrap-select">
+          <option value="">--Choose an option--</option>
+          <option value="no-wrap">No Wrap</option>
+          <option value="wrap">Wrap</option>
+          <option value="wrap-reverse">Wrap Reverse</option>
+        </select>
+      </div>
+      <section class="icon-collection">
+        <div class="toolbar-icon flexbox-icon">
+          <i class="far fa-box flexbox-icon"></i>
+        </div>
+      </section>
+      <hr>
+      <p class="def-text def-text-header">Align items</p>
+      <div class="dual-column">
+        <p class="def-text">Align Items</p>
+        <select name="align-items-select" id="align-items-select">
+          <option value="">--Choose an option--</option>
+          <option value="normal">Normal</option>
+          <option value="stretch">Stretch</option>
+          <option value="center">Center</option>
+          <option value="start">Start</option>
+          <option value="end">End</option>
+        </select>
+      </div>
+      <section class="icon-collection">
+        <div class="toolbar-icon align-items-icon">
+          <i class="fal fa-align-justify align-items-icon"></i>
+        </div>
+      </section>
+      <hr>
+      <p class="def-text def-text-header">Align Content</p>
+      <div class="dual-column">
+        <p class="def-text">Align Content</p>
+        <select name="align-content-select" id="align-content-select">
+          <option value="">--Choose an option--</option>
+          <option value="center">Center</option>
+          <option value="start">Start</option>
+          <option value="end">End</option>
+          <option value="flex-start">Flex Start</option>
+          <option value="flex-end">Flex End</option>
+          <option value="space-between">Space Between</option>
+          <option value="space-around">Space Around</option>
+          <option value="space-evenly">Space Evenly</option>
+        </select>
+      </div>
+      <section class="icon-collection">
+        <div class="toolbar-icon align-content-icon">
+          <i class="fal fa-align-justify align-content-icon"></i>
+        </div>
+      </section>
+      <hr>
+      <p class="def-text def-text-header">Justify Content</p>
+      <div class="dual-column">
+        <p class="def-text">Justify Content</p>
+        <select name="justify-content-select" id="justify-content-select">
+          <option value="">--Choose an option--</option>
+          <option value="center">Center</option>
+          <option value="start">Start</option>
+          <option value="end">End</option>
+          <option value="flex-start">Flex Start</option>
+          <option value="flex-end">Flex End</option>
+          <option value="left">Left</option>
+          <option value="right">Right</option>
+          <option value="space-between">Space Between</option>
+          <option value="space-around">Space Around</option>
+          <option value="space-evenly">Space Evenly</option>
+        </select>
+      </div>
+      <section class="icon-collection">
+        <div class="toolbar-icon justify-content-icon">
+          <i class="fal fa-align-justify justify-content-icon"></i>
+        </div>
+      </section>
+      <hr>
+      <p class="def-text def-text-header">Border</p>
+      <div class="dual-column">
+        <p class="def-text">Border Style</p>
+        <select name="border-style-select" id="border-style-select">
+          <option value="">--Choose an option--</option>
+          <option value="none">none</option>
+          <option value="solid">Solid</option>
+          <option value="dashed">Dashed</option>
+          <option value="double">Double</option>
+          <option value="inset">Inset</option>
+          <option value="outset">Outset</option>
+        </select>
+      </div>
+      <div class="dual-column">
+        <p class="def-text">Border Width</p>
+        <input type="number" id="border-width-input" name="border-width" min="0" placeholder="4">
+      </div>
+      <div class="dual-column">
+        <p class="def-text">Border Radius</p>
+        <input type="number" id="border-radius-input" name="border-radius" min="0" placeholder="4">
+      </div>
+      <div class="dual-column">
+        <p class="def-text">Border Color</p>
+        <input type="color" id="border-color-input" value="#fbff00">
+      </div>
+      <hr>
+      <p class="def-text def-text-header">Background</p>
+      <div class="dual-column">
+        <p class="def-text">Background Color</p>
+        <input type="color" id="background-color-input" value="#00ff77">
+      </div>
+      <hr>
+      <p class="def-text def-text-header">Gradients</p>
+      <div class="dual-column">
+        <p class="def-text">Gradient Direction</p>
+        <select name="gradient-direction-select" id="gradient-direction-select">
+          <option value="">--Choose an option--</option>
+          <option value="left">left</option>
+          <option value="right">right</option>
+          <option value="top">top</option>
+          <option value="bottom">bottom</option>
+        </select>
+      </div>
+      <div class="dual-column">
+        <p class="def-text">Gradient Color 1</p>
+        <input type="color" id="gradient-color-input-1" value="#0077ff">
+      </div>
+      <div class="dual-column">
+        <p class="def-text">Gradient Color 2</p>
+        <input type="color" id="gradient-color-input-2" value="#6a00ff">
+      </div>
+      <section class="icon-collection">
+        <div class="toolbar-icon gradient-icon">
+          <i class="far fa-fill gradient-icon"></i>
+        </div>
+      </section>
+      <hr>
+      <p class="def-text def-text-header">Dimensions</p>
+      <div class="dual-column">
+        <p class="def-text">Width</p>
+        <input type="number" id="element-width-input" name="element-width" min="1" placeholder="200">
+      </div>
+      <div class="dual-column">
+        <p class="def-text">Height</p>
+        <input type="number" id="element-height-input" name="element-height" min="1" placeholder="200">
+      </div>
+      <hr>
+      <p class="def-text def-text-header">Insert Asset</p>
+      <div class="dual-column">
+        <p class="def-text">Upload Asset</p>
+        <input type="file" id="asset-file-input" name="asset-input">
+      </div>
+      <section class="icon-collection">
+        <div class="toolbar-icon file-upload-icon">
+          <i class="far fa-file-upload file-upload-icon"></i>
+        </div>
+      </section>
+    </section>
+  </div>
+</body>
+<script src="index.js"></script>
+</html>

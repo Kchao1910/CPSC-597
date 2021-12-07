@@ -1,0 +1,316 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --pri-bg: #060705;
+  --sec-bg: #151515;
+  --tri-bg: #242424;
+}
+
+body {
+  background-color: var(--pri-bg);
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+}
+
+hr {
+  color: white;
+}
+
+.def-text {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  color: white;
+}
+
+.def-text-header {
+  font-weight: 700;
+  margin: 16px 16px;
+}
+
+.left-panel {
+  display: grid;
+  place-items: center;
+}
+
+.left-side-panel {
+  border: solid 1px white;
+  width: 368px;
+  height: 1100px;
+  background-color: var(--sec-bg);
+  border-radius: 8px;
+  margin: auto 24px auto auto;
+  overflow-y: scroll;
+}
+
+.central-panel {
+  width: 1440px;
+  margin: 0px 24px;
+}
+
+.right-panel {
+  border: solid 1px white;
+  width: 368px;
+  height: 1100px;
+  background-color: var(--sec-bg);
+  border-radius: 8px;
+  margin: auto auto auto 24px;
+  overflow-y: scroll;
+}
+
+.left-toolbar {
+  border: solid 1px white;
+  display: flex;
+  flex-direction: column;
+  height: 296px;
+  width: 64px;
+  border-radius: 8px;
+  background-color: var(--sec-bg);
+  align-items: center;
+  justify-content: space-evenly;
+  margin: auto 24px auto 24px;
+}
+
+.central-toolbar, .download-wrapper, .logo-wrapper {
+  border: solid 1px white;
+  display: flex;
+  height: 64px;
+  width: 224px;
+  border-radius: 8px;
+  background-color: var(--sec-bg);
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 20px auto;
+}
+
+.download-wrapper, .logo-wrapper {
+  font-family: "Montserrat", sans-serif;
+  color: white;
+}
+
+.download-link, #download-link {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  color: white;
+  border: none;
+  height: inherit;
+  background-color: transparent;
+  width: inherit;
+}
+
+.left-controls-container {
+  margin-left: auto;
+}
+
+.right-controls-container {
+  margin-right: auto;
+}
+
+.toolbar-icon {
+  display: grid;
+  background-color: var(--tri-bg);
+  height: 48px;
+  width: 48px;
+  border-radius: 4px;
+  place-items: center;
+  will-change: transform;
+}
+
+.toolbar-icon2 {
+  display: grid;
+  background-color: var(--tri-bg);
+  height: 48px;
+  width: 96px;
+  border-radius: 4px;
+  place-items: center;
+  will-change: transform;
+}
+
+.icon-collection {
+  display: grid;
+  grid-template-columns: repeat(6, 48px);
+  grid-gap: 8px;
+  margin-left: 16px;
+  margin-bottom: 16px;
+}
+
+.icon-collection2 {
+  display: grid;
+  grid-template-columns: repeat(3, 96px);
+  grid-gap: 8px;
+  margin-left: 16px;
+  margin-bottom: 16px;
+}
+
+.main-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.editor-wrapper {
+  justify-items: center;
+  display: grid;
+  border: solid 1px white;
+  border-radius: 8px;
+  width: 1440px;
+  height: 1100px;
+  transition: width ease-in-out 1s;
+  will-change: width;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.editor {
+  background: white;
+  position: relative;
+  width: 1440px;
+  min-height: 1100px;
+  transition: width ease-in-out 1s;
+  will-change: width;
+  overflow-x: hidden;
+}
+
+.fab, .fal, .far, .fas {
+  font-size: 24px;
+  color: white;
+}
+
+.fa-paragraph {
+  transform: translateX(-2px);
+}
+
+.dual-column {
+  margin-left: 16px;
+}
+
+.toolbar-icon:hover, .toolbar-icon2:hover, .toolbar-icon:hover .fab, .toolbar-icon:hover .fal, .toolbar-icon:hover .far, .toolbar-icon:hover .fas, #download-link:hover {
+  color: var(--tri-bg);
+  transition: all 0.125s ease-in-out;
+}
+
+.toolbar-icon:hover, .toolbar-icon2:hover, #download-link:hover {
+  background-color: white;
+}
+
+.toolbar-icon:active, .toolbar-icon2:active, #download-link:active {
+  transform: scale(0.8);
+}
+
+.mobile-side {
+  transform: rotate(-90deg);
+}
+
+.dual-column {
+  column-count: 2;
+  margin-bottom: 8px;
+}
+
+.dt-br {
+  border-right: solid 1px white;
+}
+
+.location-pad-container {
+  padding: 16px;
+}
+
+.outer-pad {
+  border-radius: 16px;
+  background-color: var(--tri-bg);
+  width: 328px;
+  height: 160px;
+}
+
+/* a h1 inside a section element with have the same relative sizing as h2, therefor font-size is changed to 2 rem to correctly change sizing */
+section h1 {
+  font-size: 2rem;
+}
+
+input {
+  background-color: var(--tri-bg);
+  border-radius: 4px;
+  border-color: transparent;
+  color: white;
+  width: 144px;
+}
+
+input[type="color"] {
+  width: 148px;
+}
+
+.dual-column input[type="number"] {
+  padding-left: 4px;
+  width: 140px;
+}
+
+select {
+  background-color: var(--tri-bg);
+  color: white;
+  border-radius: 4px;
+  border-color: transparent;
+  width: 148px;
+}
+
+.controls-grid {
+  border-radius: 12px;
+  display: grid;
+  grid-template-areas: 
+    ". top ."
+    "left rect right"
+    ". bot .";
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 16px;
+  height: 160px;
+  justify-items: center;
+}
+
+.position-input {
+  text-align: center;
+  width: 48px;
+}
+
+/* Position Grid Areas */
+#position-left, #margin-left, #padding-left {
+  grid-area: left;
+}
+
+#position-right, #margin-right, #padding-right {
+  grid-area: right;
+}
+
+#position-top, #margin-top, #padding-top {
+  grid-area: top;
+}
+
+#position-bottom, #margin-bottom, #padding-bottom {
+  grid-area: bot;
+}
+
+.grid-rect {
+  background-color: var(--pri-bg);
+  border-radius: 6px;
+  grid-area: rect;
+  height: 40px;
+  width: 80px;
+}
+
+@media screen and (min-width: 1536px){
+  .left-side-panel, .right-panel {
+    width: 240px;
+  }
+
+  .central-panel, .editor-wrapper {
+    width: 848px;
+  }
+
+  .icon-collection {
+    grid-template-columns: repeat(2, 48px);
+  }
+
+  .dual-column {
+    column-count: 1;
+  }
+}
