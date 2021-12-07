@@ -297,7 +297,7 @@ select {
   width: 80px;
 }
 
-@media screen and (min-width: 1536px){
+@media screen and (max-width: 1536px){
   .left-side-panel, .right-panel {
     width: 240px;
   }
